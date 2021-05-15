@@ -1,0 +1,7 @@
+{
+  "name": "crawler-scheduler",
+  "script": "worker/index.js",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

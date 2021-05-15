@@ -1,16 +1,15 @@
 {
   "name": "notnuzzel-scheduler",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
   "scripts": {
-    "dev": "ncc run index.js",
-    "build": "ncc build index.js -o dist",
-    "start": "node dist/"
+    "dev": "dotenv ncc run worker.js",
+    "build": "ncc build worker.js -o worker"
   },
   "dependencies": {
-    "cron": "^1.8.2",
-    "rsmq-promise": "^1.0.4"
+    "@notnuzzel/crawl": "^1.0.1",
+    "@notnuzzel/prisma": "^1.0.5",
+    "@prisma/client": "^2.22.1",
+    "cron": "^1.8.2"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.28.5"

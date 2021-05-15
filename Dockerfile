@@ -1,14 +1,8 @@
-# syntax=docker/dockerfile:1
-
-FROM node:14.16.1
-ENV NODE_ENV=production
-
-WORKDIR /app
-
-COPY ["package.json", "yarn.lock", "./"]
-
-RUN yarn install --production
-
+FROM keymetrics/pm2:latest-alpine
+COPY ["package.json", "yarn.lock", "pm2.json", "./"]
+ENV NPM_CONFIG_LOGLEVEL warn
+RUN yarn install --pure-lockfile
 COPY . .
-
-CMD [ "yarn", "start" ]
+RUN yarn build
+RUN ls -al -R
+CMD [ "pm2-runtime", "start", "pm2.json" ]
