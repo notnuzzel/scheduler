@@ -2,12 +2,14 @@
   "name": "notnuzzel-scheduler",
   "version": "1.0.0",
   "scripts": {
-    "dev": "dotenv -- node -r esm worker/",
+    "dev": "dotenv -- node -r esm worker.js",
+    "dev:push": "dotenv -- node -r esm dev/push.js",
+    "dev:dump": "dotenv -- node -r esm dev/dump.js",
     "start": "node -r esm worker/"
   },
   "dependencies": {
     "@notnuzzel/crawl": "^1.0.6",
-    "@notnuzzel/prisma": "^1.0.13",
+    "@notnuzzel/prisma": "^1.0.14",
     "cron": "^1.8.2",
     "esm": "^3.2.25",
     "regenerator-runtime": "^0.13.7"
