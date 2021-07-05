@@ -3,7 +3,7 @@ import { crawlAccount, findAccount } from '../src/'
 
 const pushCrawl = async () => {
   const account = await findAccount(process.env.ACCOUNT_ID)
-  //await crawlAccount(account)
+  await crawlAccount(account)
   console.log(`queued crawl for account ${account.id}`)
 }
 

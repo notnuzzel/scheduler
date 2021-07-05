@@ -8,8 +8,8 @@
     "start": "node -r esm worker/"
   },
   "dependencies": {
-    "@notnuzzel/crawl": "^1.0.6",
-    "@notnuzzel/prisma": "^1.0.14",
+    "@notnuzzel/crawl": "^1.0.7",
+    "@notnuzzel/prisma": "^1.0.15",
     "cron": "^1.8.2",
     "esm": "^3.2.25",
     "regenerator-runtime": "^0.13.7"
