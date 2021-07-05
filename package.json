@@ -2,16 +2,17 @@
   "name": "notnuzzel-scheduler",
   "version": "1.0.0",
   "scripts": {
-    "dev": "dotenv ncc run worker.js",
-    "build": "ncc build worker.js -o worker"
+    "dev": "dotenv -- node -r esm worker/",
+    "start": "node -r esm worker/"
   },
   "dependencies": {
-    "@notnuzzel/crawl": "^1.0.1",
-    "@notnuzzel/prisma": "^1.0.5",
-    "@prisma/client": "^2.22.1",
-    "cron": "^1.8.2"
+    "@notnuzzel/crawl": "^1.0.6",
+    "@notnuzzel/prisma": "^1.0.13",
+    "cron": "^1.8.2",
+    "esm": "^3.2.25",
+    "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.28.5"
+    "dotenv-cli": "^4.0.0"
   }
 }
